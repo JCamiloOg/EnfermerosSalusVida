@@ -1,10 +1,22 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "../assets/fonts/stylesheet.css";
 
 @custom-variant dark (&:is(.dark *));
 
 body {
   background-color: #eeeeee;
+}
+
+/* Aplicar la fuente en toda la app */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 @theme inline {
