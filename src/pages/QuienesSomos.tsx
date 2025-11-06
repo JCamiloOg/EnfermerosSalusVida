@@ -24,7 +24,7 @@ export default function QuienesSomos() {
             <Loader isVisible={loading} />
             <WaButton />
             <NavBar />
-            <main className="container mx-auto px-4 pt-30 ">
+            <main className="max-w-7xl mx-auto px-4 pt-30 ">
                 <section>
                     <article className="bg-[#37b9ff19] p-10 rounded-2xl">
                         <h2 data-aos="fade-left" className="text-5xl font-semibold text-[#1c64f2]">¿Quienes somos?</h2>
@@ -81,7 +81,9 @@ export default function QuienesSomos() {
                             </div>
                         </div>
                         <center data-aos="fade-up" className="mt-20">
-                            <ContactButton />
+                            <ContactButton>
+                                Contactanos
+                            </ContactButton>
                         </center>
                     </article>
                 </section>

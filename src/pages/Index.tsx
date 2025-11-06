@@ -32,7 +32,7 @@ export default function Index() {
             <HeroSection />
             <WaButton />
 
-            <section className="container px-4 mx-auto">
+            <section className="max-w-7xl px-4  mx-auto">
                 <article className="grid grid-cols-12 gap-4">
                     <div data-aos="fade-right" className="col-span-12 md:col-span-6">
                         <h2 className="text-center text-[#1c64f2] text-3xl font-semibold">¿Buscas servicios de Enfemería a domicilio En Medellín?</h2>
