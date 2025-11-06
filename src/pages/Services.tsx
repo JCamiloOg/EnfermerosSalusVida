@@ -7,6 +7,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useParams } from "react-router";
 import Page404 from "./404";
 import Footer from "@/components/footer/Footer";
+import ContactButton from "@/components/buttons/contactButton/ContactButton";
 
 interface Params extends Record<string, string> {
     servicio: string;
@@ -62,27 +63,29 @@ export default function Services() {
             <Loader isVisible={loading} />
             <NavBar />
             <WaButton />
-            <section className="container px-4 mx-auto pt-30">
+            <section className="max-w-7xl px-4 mx-auto pt-30">
                 <h2 data-aos="fade-up" className="text-center text-4xl font-bold text-[#1c64f2] md:mt-20 mt-5">{services?.title}</h2>
                 <article className="grid grid-cols-12 gap-4 md:mt-20 mt-10">
                     <div data-aos="fade-right" className="col-span-12 md:col-span-6">
-                        <img src={services?.img1} className="w-100 rounded-2xl" alt="" />
+                        <center>
+                            <img src={services?.img1} className="w-100 rounded-2xl" alt="" />
+                        </center>
                     </div>
                     <div data-aos="fade-left" className="col-span-12 md:col-span-6">
                         <p
-                            className="font-medium text-lg"
+                            className="font-medium text-lg  md:text-left text-justify"
                             dangerouslySetInnerHTML={{ __html: services?.description ?? "" }}
                         >
 
                         </p>
                     </div>
                 </article>
-                <article className="rid grid-cols-12 gap-4 md:mt-20 mt-10">
-                    <div className="col-span-12 md:col-span-6">
-                        <ol>
+                <article className="grid grid-cols-12 gap-4 md:mt-20 mt-10">
+                    <div data-aos="fade-right" className="col-span-12 md:col-span-6">
+                        <ol className="list-decimal list-inside space-y-7 font-medium">
                             {
                                 services?.content?.map((item, idx) => (
-                                    <li key={idx}>
+                                    <li className="" key={idx}>
                                         {
                                             item.text
                                         }
@@ -91,11 +94,17 @@ export default function Services() {
                             }
                         </ol>
                     </div>
-                    <div className="col-span-12 md:col-span-6">
-                        <img src={services?.img2} className="w-100 rounded-2xl" alt="" />
-
+                    <div data-aos="fade-left" className="col-span-12 md:col-span-6">
+                        <center>
+                            <img src={services?.img2} className="w-100 rounded-2xl" alt="" />
+                        </center>
                     </div>
                 </article>
+                <center data-aos="fade-up" className="mt-20">
+                    <ContactButton>
+                        Cotizar
+                    </ContactButton>
+                </center>
             </section>
             <Footer />
         </>
