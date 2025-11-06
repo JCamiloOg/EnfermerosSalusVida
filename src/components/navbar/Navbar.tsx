@@ -37,7 +37,7 @@ export default function NavBar() {
     useClickOutSide([navMobileRef, buttonMobileRef], close);
 
     return (
-        <nav className="border-gray-200 px-2 bg-white py-6 shadow-lg fixed top-0 w-full z-49 ">
+        <nav className="border-gray-200 px-2 lg:px-10 bg-white py-6 shadow-lg fixed top-0 w-full z-49 ">
             <div className="container mx-auto flex flex-wrap items-center justify-between">
                 <Link to={"/"} className="shrink-0 flex items-center cursor-pointer">
                     <img src={logo} className="h-10 scale-250 sm:scale-250 md:scale-260 lg:scale-300 xl:scale-300 2xl:scale-300 w-auto" alt="" />
