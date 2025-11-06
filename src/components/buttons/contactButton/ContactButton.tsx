@@ -1,9 +1,15 @@
 import "./contactButton.css";
 
-export default function ContactButton() {
+interface Props {
+    children: React.ReactNode;
+}
+
+
+
+export default function ContactButton({ children }: Props) {
     return (
         <button className="contactButton">
-            Contactanos
+            {children}
             <div className="star-1">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlSpace="preserve" version="1.1" style={{ shapeRendering: 'geometricPrecision', textRendering: 'geometricPrecision', imageRendering: 'pixelated', fillRule: 'evenodd', clipRule: 'evenodd' }} viewBox="0 0 784.11 815.53" xmlnsXlink="http://www.w3.org/1999/xlink">
                     <defs />
