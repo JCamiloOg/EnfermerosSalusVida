@@ -5,8 +5,10 @@ import { BrowserRouter } from 'react-router';
 import ScrollToTop from './hooks/scrollToTop.ts';
 
 createRoot(document.getElementById('root')!).render(
-  <BrowserRouter>
-    <ScrollToTop />
-    <App />
-  </BrowserRouter>,
+  <StricMode>
+    <BrowserRouter>
+      <ScrollToTop />
+      <App />
+    </BrowserRouter>
+  </StricMode>
 );
