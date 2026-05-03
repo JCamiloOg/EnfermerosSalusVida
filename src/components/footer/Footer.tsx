@@ -38,6 +38,9 @@ export default function Footer() {
                     </a>
                 </li>
             </ul>
+            <div className="absolute w-full mt-3 ">
+                <span className="relative font-bold">Desarrollado por: <a href="https://www.instagram.com/jncamilo.dev" className="text-[#1c64f2] font-bold hover:underline hover:text-[#1b4875] cursor-pointer">Juan Camilo Osorio</a></span>
+            </div>
         </footer>
     );
 }
